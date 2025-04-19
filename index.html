@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For Riri 💖</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(120deg, #f6d365, #fda085);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: auto;
+      flex-direction: column;
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 25px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      width: 90%;
+      max-width: 600px;
+      animation: slideUp 1s ease;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      color: #ff6f61;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center;
+      color: #333;
+      font-size: 1.1rem;
+    }
+
+    .question {
+      margin: 20px 0;
+    }
+
+    label {
+      font-weight: bold;
+      color: #555;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 2px solid #ffcdd2;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    input[type="text"]:focus {
+      outline: none;
+      border-color: #ff8a80;
+    }
+
+    .heart {
+      font-size: 2rem;
+      text-align: center;
+      animation: beat 1s infinite;
+      margin: 20px 0;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    button {
+      background-color: #ff6f61;
+      color: white;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      display: block;
+      margin: 0 auto;
+    }
+
+    button:hover {
+      background-color: #ff3d47;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 25px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Hey Riri 🌼</h1>
+    <p>Today, I just want to appreciate you. No reason. Just vibes and care. 💫</p>
+
+    <form onsubmit="handleSubmit(event)">
+      <div class="question">
+        <label>1. What made you smile today?</label>
+        <input type="text" required>
+      </div>
+
+      <div class="question">
+        <label>2. What’s something you want to share with me?</label>
+        <input type="text" required>
+      </div>
+
+      <div class="question">
+        <label>3. What can I do better starting today?</label>
+        <input type="text" required>
+      </div>
+
+      <div class="question">
+        <label>4. What do you love most about us?</label>
+        <input type="text" required>
+      </div>
+
+      <div class="heart">❤️</div>
+
+      <button type="submit">Send 💌</button>
+    </form>
+
+    <div class="footer">
+      This isn't just code. It's care. — Yours always.
+    </div>
+  </div>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert("Your answers made my day. Thank you, Riri 💖");
+    }
+  </script>
+</body>
+</html>
